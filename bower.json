@@ -1,0 +1,20 @@
+{
+  "name": "confug",
+  "version": "0.0.0",
+  "description": "Really simple javascript configs for multi-staged deployments",
+  "main": "dist/confug.js",
+  "author": {
+    "name": "Cory Mawhorter",
+    "email": "cory.mawhorter@gmail.com"
+  },
+  "repository": "corymawhorter/confug",
+  "license": "MIT",
+  "dependencies": {},
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
