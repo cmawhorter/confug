@@ -1,3 +1,7 @@
+/*! confug - v0.0.0
+ *  Release on: 2014-07-31
+ *  Copyright (c) 2014 Cory Mawhorter
+ *  Licensed MIT */
 'use strict';
 
 (function (factory) {
