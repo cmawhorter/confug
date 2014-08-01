@@ -2,11 +2,8 @@
  *  Release on: 2014-07-31
  *  Copyright (c) 2014 Cory Mawhorter
  *  Licensed MIT */
-'use strict';
-
-(function (factory) {
+(function (global, factory) {
   /*global define*/
-  var global = this;
   if (typeof define === 'function' && define.amd) {
     define([], function () {
       return factory(global);
@@ -17,7 +14,8 @@
     global.confug = factory(global);
   }
 
-}(function (global) {
+}(this, function (global) {
+  'use strict';
   var confug;
 
   var _allowedTypes = [ typeof '', typeof true, typeof 1 ] // TODO: (maybe) support function if it returns one of these types
@@ -256,14 +254,7 @@
     var ret = {}
       , matchingKeys = 0
       , regex = lookup instanceof RegExp
-      , lookuplen;
-
-    // no partial namespace lookups for non-regex
-    if (false === regex && lookup[lookup.length - 1] !== ':') {
-      lookup += ':';
-    }
-
-    lookuplen = lookup.length;
+      , lookuplen = lookup.length;
 
     for (var key in this._values) {
       var nkey = key;
